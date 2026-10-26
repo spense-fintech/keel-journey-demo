@@ -1,7 +1,7 @@
 import http from 'node:http';
 import { readFileSync } from 'node:fs';
 const page = readFileSync(new URL('./index.html', import.meta.url));
-const version = "original";
+const version = "candidate";
 const server = http.createServer((req, res) => {
   res.setHeader('Cache-Control', 'no-store');
   res.setHeader('X-Content-Type-Options', 'nosniff');
